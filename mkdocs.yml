@@ -1,0 +1,13 @@
+site_name: VoltMX Docs
+site_url: https://github.com/paguejoy/voltmx-design-import
+nav:
+    - Home: index.md
+    - Iris:
+        - Installation: 'iris/installation.md'
+        - Debugger: 'iris/debugger.md'
+        - Design Import: 'iris/designImport.md'
+    - Foundry:
+        - Foundry: 'foundry/Foundry.md'
+        - KEEP: 'foundry/Keep.md'
+        
+theme: readthedocs

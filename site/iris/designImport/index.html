@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/paguejoy/voltmx-design-import/iris/designImport/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Design Import - VoltMX Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Design Import";
+        var mkdocs_page_input_path = "iris/designImport.md";
+        var mkdocs_page_url = "/paguejoy/voltmx-design-import/iris/designImport/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> VoltMX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Iris</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debugger/">Debugger</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Design Import</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-connect-iris-to-foundry-server">How to connect Iris to Foundry server:</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Foundry/">Foundry</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Keep/">KEEP</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">VoltMX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Iris &raquo;</li>
+      <li>Design Import</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="design-import">Design Import</h1>
+<hr />
+<h4 id="how-to-connect-iris-to-foundry-server">How to connect Iris to Foundry server:</h4>
+<ol>
+<li>
+<p>Go to the menu bar, go to Volt MX Iris &gt; Preferences:</p>
+<ul>
+<li>
+<p>Mac
+<br>
+<img alt="preferences" src="../assets/preferences.png" /></p>
+</li>
+<li>
+<p>Windows
+<br>
+<img alt="preferences" src="../assets/preferences-win.png" /></p>
+</li>
+</ul>
+</li>
+<li>
+<p>On the Volt MX Foundry tab, type in the Foundry URL: <b>https://vmxgo-design-import-qs-foundry.qs.hcllabs.net</b> and click <em>Validate</em> then <em>Done</em>
+    <br>
+    <img alt="vmxpreferences" src="../assets/vmxPreferences.png" /></p>
+</li>
+<li>
+<p>Make sure to have an account on the foundry qs server. Your name should be listed in the users' list. 
+    <br>
+    <img alt="userLists" src="../assets/userList.png" />
+    <br></p>
+<ul>
+<li>If you don't have it, ask the admin to create one for you
+<img alt="addNewUser" src="../assets/addNewUser.png" /></li>
+</ul>
+</li>
+<li>
+<p>On the top right corner of Iris, click Login. And type in you credentials. (Example, Email: timothykenneth.arcet@hcl.com, Password: Pass123$)
+    <br>
+    <img alt="login" src="../assets/login.png" />
+    <br>
+    <img alt="login2" src="../assets/login2.png" /></p>
+</li>
+<li>
+<p>You can now try the Migration tool on Iris. Go to <b>Project</b> &gt; <b>Import</b> &gt; <b>Domino Applications</b>
+    <br>
+    <img alt="import" src="../assets/import.png" /></p>
+</li>
+<li>
+<p>On the Keep Identity service, a prompt will appear. Type in the credentials, <b>Username</b>: admin keep, <b>Password</b>: passw0rd
+    <br>
+    <img alt="credentials" src="../assets/credentials.png" /></p>
+</li>
+</ol>
+<h1 id="design-import-wizard">Design Import Wizard</h1>
+<hr />
+<h2 id="code-structure">Code Structure</h2>
+<p>Wizard folder are composed of different files like:</p>
+<ol>
+<li>public/desktopweb/app/wizard/domino/index.js<ul>
+<li>This is where you need to declare the screens that you are going to import within the wizard. </li>
+</ul>
+</li>
+<li>public/desktopweb/app/wizard/domino/utils.js<ul>
+<li>You don’t need to modify this unless you want to add new features to wizard that will affect / will be used across all screens.</li>
+</ul>
+</li>
+<li>public/desktopweb/app/wizard/domino/constants.js<ul>
+<li>This is for any constants variables that will be used across all screen. The most important line here is the STEPS object (should be the last part) since if you need to add new screen, then you need to add a new value here.
+<br>
+<img alt="constVariables" src="../assets/constVariables.png" /></li>
+</ul>
+</li>
+<li>public/desktopweb/app/wizard/domino/&lt; screen-name &gt;/viewConfig.js<ul>
+<li>This is the declaration of the screen including its properties, modules and components. You will need to import these in index.js if you are going to declare this as part of the wizard flow.</li>
+</ul>
+</li>
+</ol>
+<h2 id="sample-create-new-screen">Sample create new screen</h2>
+<p>To create a new screen, the instructions are below:</p>
+<ol>
+<li>Create a folder for that new screen.
+(You will notice that for each screen there is a specific folder created.)<ul>
+<li>a. Name the folder based on the functionality of the screen (camelCase). And then create viewConfig.js inside of it
+    <br>
+    <img alt="viewConfig" src="../assets/viewConfig.png" /></li>
+</ul>
+</li>
+<li>
+<p>Contents of viewConfig.js</p>
+<ul>
+<li>a. You can copy the contents of viewConfig.js on any file or you can use the template below. Just change all the text that has <strong><em>CHANGETHIS</em></strong> based on the proper values
+<br>
+<a href="https://hclo365-my.sharepoint.com/personal/gladys_obmerga_hcl_com/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fgladys%5Fobmerga%5Fhcl%5Fcom%2FDocuments%2FOneNote%20Uploads%2FviewConfig%2DTemplate%2Ejs&amp;parent=%2Fpersonal%2Fgladys%5Fobmerga%5Fhcl%5Fcom%2FDocuments%2FOneNote%20Uploads&amp;ga=1">viewConfig.js-Template</a></li>
+<li>b. Make sure to change the following<ul>
+<li>Script guard details - it should be the path of the screen
+<br>
+<img alt="script1" src="../assets/script1.png" /></li>
+<li>Example:
+<br>
+<img alt="script2" src="../assets/script2.png" /></li>
+</ul>
+</li>
+<li>
+<p>c. Defining and using modules</p>
+<ul>
+<li>If there are other modules that you need to use in the screen, then you need to import it in this line of code. But the default one is always the constants and then the utils
+<br>
+<img alt="define" src="../assets/define.png" /></li>
+<li>Example of adding modules
+ <br>
+<img alt="addingModules" src="../assets/addingModules.png" />
+(Here you are adding the 4 different modules inside the screen (see public/desktopweb/app/wizard/domino/gettingStarted/viewConfig.js as an example)
+<br>
+<br>
+<mark>Take note that the arrangement of the declaration matters since that’s how konywebstudio import external modules. For example, modules/mf/mfUtils is the third one under the define array, it should be third parameter on the function parameters as well. The arrangement tells which one to reference to. </mark>
+<br>
+<br></li>
+<li>Then the variable within the function parameter will be the string to use within the screen. For example</li>
+</ul>
+</li>
+<li>
+<p>d. Get function</p>
+<ul>
+<li>This is the only function that will be return and exposed outside the screen. 
+<br>
+<img alt="getFunc" src="../assets/getFunc.png" />
+(The return value of this function will define the structure and contents of the screen.)</li>
+</ul>
+</li>
+<li>e. Rows content<ul>
+<li>e.1. This is usually the contents of the return value of get function. View, id and classList are already default and you should avoid modifying these.</li>
+<li>e.2. The contents of the screen is define by row. For example the first item on the row array is the close button. Then the first line that will be shown on the screen is the close button.
+    <br>
+    <img alt="gettingStarted" src="../assets/gettingStarted.png" />
+    <img alt="getFuncTemp" src="../assets/getFuncTemp.png" /></li>
+<li>e.3. Next item in the array is the new line of the row which is the Getting started title. 
+    <img alt="gettingStartedTitle" src="../assets/gettingStartedTitle.png" />
+    <img alt="gettingStartedTemp2" src="../assets/gettingStartedTemp2.png" /></li>
+<li>e.4. There is a certain format when declaring components within the screen. Please refer to some examples on other screens on how to add title, label, input field, buttons etc. For the example above, we have that format for adding a step title label</li>
+<li>e.5. All component that can be add with the wizard screen can be check in this folder: public/desktopweb/app/ui/views</li>
+<li>e.6. The last item on the rows arrays should be the footer buttons, which is ideally the next, back or submit button
+    <img alt="gettingStartedButton" src="../assets/gettingStartedButton.png" />
+    <img alt="gettingStartedTemp3" src="../assets/gettingStartedTemp3.png" />
+        - f.1. This is usually fetchin the pcUtils.getFooterConfig function and we just need to declare what are the buttons on the right or left side of the footer. For example: 
+        <br>
+        <img alt="pcUtils" src="../assets/pcUtils.png" /></li>
+<li>e.7. wizard.navigateTo(<em> * step Screen * </em> ) this is where you need to declare which screen should be showns based on the added button.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Declare the new screen in constants.js</p>
+<ul>
+<li>a. After you have setup the new screen, go to public/desktopweb/app/wizard/domino/constants.js</li>
+<li>b. Add a new item to STEPS object using the SNAKE_CASE format and the folder name (camelCase)
+    <br>
+    <img alt="addNewScreen" src="../assets/addNewScreen.png" /></li>
+<li>c. The arrangement is based on the steps of the wizard flow. For example we want to add the new screen after the getting started, then we will add the new item after the GETTING_STARTED item.</li>
+</ul>
+</li>
+<li>Declare the new screen in index.js<ul>
+<li>a. To formally add the new screen within the wizard flow, go to public/desktopweb/app/wizard/domino/index.js</li>
+<li>b. Declare the new screen in the define section of the index.js . Take note of the arrangement of the declaration. If you add it as the fourth item, then the new function parameter should be on the fourth item
+    <br>
+    <img alt="varArrangement" src="../assets/varArrangement.png" /></li>
+<li>c. Under the steps config, add a new array for the new screen. Since in our example we will add it after the Getting started screen, then we should add a new array after the Getting started array
+    <br>
+    <img alt="stepsConfig1" src="../assets/stepsConfig1.png" />
+    <img alt="stepsConfig2" src="../assets/stepsConfig2.png" />
+    <mark>(Take note of the STEPS.ADD_NEW_SCREEN and the value of the getViewConfig. These are the values that we set on the constants.js and the define function)</mark>
+    <br>
+    <br></li>
+<li>d. Even though we already declare the new screen in index.js, we still need to included this in one of the screens of the wizard. For example, we are assuming that after clicking the get started button in GETTING_STARTED screen, we will be redirected to the new screen</li>
+<li>e. We need to change the wizard.navigateTo of the getting started screen to redirect us to the ADD_NEW_SCREEN
+    <br>
+    <img alt="redirect" src="../assets/redirect.png" /></li>
+<li>f. For every changes that we did on the code, we need to restart the IRIS app.</li>
+</ul>
+</li>
+</ol>
+<h2 id="current-flow">Current Flow</h2>
+<p>SUBJECT TO CHANGE BASED ON REQUIREMENTS </p>
+<ol>
+<li>Getting Started<ul>
+<li>Some description on what to expect on the wizard, parameters that are needed initially </li>
+</ul>
+</li>
+<li>Associate Foundry App <ul>
+<li>Before we can make use of the app, we need to make sure that there is already a foundry app linked to the current iris project. We can create a new one or use an existing one </li>
+<li>Unlink app is not working yet. 
+    <br>
+    <img alt="createNewApp" src="../assets/createNewApp.png" />
+    <img alt="linkApp" src="../assets/linkApp.png" />
+    <img alt="assocApp" src="../assets/assocApp.png" /></li>
+</ul>
+</li>
+<li>Create Keep Services<ul>
+<li>This is where we initialize the keep services in the foundry</li>
+<li>Only the Create New option is working. The select option is for development</li>
+<li>For the Create New, it will ask all the necessary details in creating keep services
+    <br>
+    <img alt="generateSvc" src="../assets/generateSvc.png" /></li>
+<li>After adding all the details, a new set of keep integration services will be created in foundry
+    <img alt="generateSvcDataInput" src="../assets/generateSvcDataInput.png" />
+    <img alt="generateSvcDataInput" src="../assets/generateSvcDataInput.png" />
+    <img alt="generateSvcLoading" src="../assets/generateSvcLoading.png" />
+    <img alt="identitySvc" src="../assets/identitySvc.png" />
+    <img alt="integrationSvc" src="../assets/integrationSvc.png" /></li>
+<li>The details of these needs to be updated.</li>
+</ul>
+</li>
+<li>Connect to Keep Identity service<ul>
+<li>You will be ask to login to keep identity service
+    <img alt="keepIdentitySvc" src="../assets/keepIdentitySvc.png" />
+    <img alt="loginKeepCreds" src="../assets/loginKeepCreds.png" /></li>
+</ul>
+</li>
+<li>NSF Selection<ul>
+<li>You will choose which nsf file to migrate.</li>
+<li>This will be improve later on 
+<img alt="nsfSelection" src="../assets/nsfSelection.png" /></li>
+</ul>
+</li>
+<li>Data Analysis<ul>
+<li>This is where the pitcairn application will start.</li>
+<li>Ideally we will scan first the application and analyze the contents.
+<img alt="dataAnalysis" src="../assets/dataAnalysis.png" /></li>
+</ul>
+</li>
+<li>Migration Option<ul>
+<li>We have different routes to take but this is still subject to change. Always choose the first option
+<img alt="nsfOptions" src="../assets/nsfOptions.png" /></li>
+</ul>
+</li>
+<li>Generate Forms<ul>
+<li>After analyzing and determining the contents to be migrated, generating forms will be the next one
+<img alt="startMigrationAlert" src="../assets/startMigrationAlert.png" /></li>
+</ul>
+</li>
+<li>Generate Foundry Services<ul>
+<li>If there are still foundry services that needs to be migrated, we will add this in this part of the screen</li>
+<li>No functionality has been added yet on this part</li>
+</ul>
+</li>
+<li>Connect to Foundry<ul>
+<li>If there are mappings yet to be added
+<img alt="connectToFoundry" src="../assets/connectToFoundry.png" /></li>
+</ul>
+</li>
+<li>Result<ul>
+<li>Show if the migration is success or not
+<img alt="result" src="../assets/result.png" /></li>
+</ul>
+</li>
+</ol>
+<h1 id="adding-modules">Adding Modules</h1>
+<hr />
+<p>Modules are essential piece of the konywebstudio, you can mostly see the codes within kony as reusable set of codes that can be imported almost anywhere in the codes (but with certain format and exception of course)</p>
+<p>You will see all the modules, especially for the frontend side of IRIS in : public/desktopweb/app/modules</p>
+<p>If there are functions that are not available in konywebstudio, we need to create a module for that and we can create it under: public/desktopweb/app/modules/migration</p>
+<p><strong>IMPORTANT: AVOID MODIFYING ANY MODULES THAT ARE NOT RELATED TO DESIGN IMPORT. PLEASE CONSULT IF YOU NEED TO MODIFY ONE</strong></p>
+<ol>
+<li>Creating new module<ul>
+<li>The usual format of a new module file is the following:<ul>
+<li>Script guard</li>
+<li>Define function</li>
+<li>Return value
+<img alt="scriptGuard" src="../assets/scriptGuard.png" /></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Creating functions within module<ul>
+<li>You can create it in two ways<ul>
+<li>Using normal function return
+<img alt="normalFUnc" src="../assets/normalFUnc.png" /></li>
+<li>Using ns function (widely used in kony)
+<img alt="nsFunc" src="../assets/nsFunc.png" />
+(This utilizes ns parameter and strictly follow the format above.)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>This utilizes ns parameter and strictly follow the format above.
+Importing module into another module<ul>
+<li>In order to define or reuse the module, you can declare it in define function method as mentioned in other section. </li>
+<li>Just take note that the path that you will add in the define method will depend on where the file is located</li>
+</ul>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../debugger/" class="btn btn-neutral float-left" title="Debugger"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../foundry/Foundry/" class="btn btn-neutral float-right" title="Foundry">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../debugger/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../foundry/Foundry/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

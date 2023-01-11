@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/paguejoy/voltmx-design-import/iris/debugger/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Debugger - VoltMX Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Debugger";
+        var mkdocs_page_input_path = "iris/debugger.md";
+        var mkdocs_page_url = "/paguejoy/voltmx-design-import/iris/debugger/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> VoltMX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Iris</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Debugger</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#remove-disable-devtools">Remove --disable-devtools</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../designImport/">Design Import</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Foundry/">Foundry</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Keep/">KEEP</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">VoltMX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Iris &raquo;</li>
+      <li>Debugger</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="debuger">Debuger</h1>
+<hr />
+<h4 id="remove-disable-devtools">Remove --disable-devtools</h4>
+<p><br></p>
+<ol>
+<li>
+<p>On the root folder of 'konywebstudio,' open the file named 'package.json' 
+    <br>
+   (<strong>Note</strong>: Revert this change before committing, or don't include this file on the commit)</p>
+<ul>
+<li>Go to line no. 9, where the key name is "chromium-args"</li>
+<li>Remove the snippet '--disable=devtools' from the value
+<img alt="npmrc" src="../assets/remove_disabled_devtools.png" /></li>
+</ul>
+</li>
+<li>
+<p>Open the file named <strong>run_mac.sh</strong> (for Mac) or <strong>run_win.bat</strong> (for Windows) </p>
+<ul>
+<li>Add the following snippet of code in between "…Iris" and the dot (.)
+<br>
+<code>--remote-debugging-port=9876</code>
+<img alt="npmrc" src="../assets/port.png" /></li>
+</ul>
+</li>
+<li>
+<p>Once you're done, run iris via the command 
+    <br>
+    For Mac
+    <br>
+    <code>./run_mac.sh</code>
+    <br></p>
+<p><br>
+For Windows
+<br>
+<code>run_win.bat</code></p>
+</li>
+<li>
+<p>Go to a browser, and type in <strong>localhost:9876</strong></p>
+<ul>
+<li>The links above serves different purpose:<ol>
+<li>The first one is for the frontend side of the application. <u>You will work on mostly in this page</u>.</li>
+<li>Second is just for the splash screen. The least important and rarely use.</li>
+<li>Third is for backend request. This is mostly related to the lib folder of konywebstudio.
+<br>
+<img alt="npmrc" src="../assets/localhost.png" /></li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Click item that you want to debug and it looks like this. You can add now a breakpoint.</p>
+<ul>
+<li>This is what it should look like in the browser. You can now add <strong>debug</strong> anywhere in konywebstudio code as a breakpoint.
+ <img alt="npmrc" src="../assets/debugger.png" /></li>
+</ul>
+</li>
+</ol>
+<h1 id="debugging">Debugging</h1>
+<hr />
+<h2 id="how-to-add-breakpoints">How to add breakpoints?</h2>
+<ol>
+<li>
+<p>public/desktopweb folder holds the frontend codes of iris and the codes here can be observed using a debugger. Either by:</p>
+<ul>
+<li>Adding a debugger inline within the code (this is not highly recommended and make sure that before you push it to the repository, you have remove this already)
+<br>
+<img alt="breakpoint1" src="../assets/breakpoint1.png" /></li>
+<li>Adding a breakpoint in the source panel of the web inspector. 
+<br>
+<img alt="breakpoint2" src="../assets/breakpoint2.png" /></li>
+</ul>
+</li>
+<li>
+<p>It is highly recommended to use the <b>source</b> panel of your browser to make the breakpoints only for your use and will not affect the codes in general.</p>
+<ul>
+<li>click the first link of the inspectable pages
+<br>
+<img alt="sourceLink" src="../assets/sourceLink.png" /></li>
+<li>Click on source tab
+<br>
+<img alt="source" src="../assets/source.png" /></li>
+<li>Look at the files that you want to debug (folder structure of public/desktopweb)
+<br>
+<img alt="sourceTree" src="../assets/sourceTree.png" /></li>
+<li>Click on the line that you will observe by clicking the line code number, example line 529
+<br>
+<img alt="dataPanel1" src="../assets/dataPanel1.png" /></li>
+<li>And trigger it using the IRIS app. Make sure that the localhost:9876 is enabled in the browser before you make the action in the app.</li>
+<li>You will notice that the IRIS application will stop if its already hit the line that you are trying to break
+<br>
+<img alt="debugger2" src="../assets/debugger2.png" />
+<img alt="debugger3" src="../assets/debugger3.png" /></li>
+<li>You can make use of the icons on the right side of the source panel to resume, step over, step into the codes
+<br>
+<img alt="playButton" src="../assets/playButton.png" /></li>
+<li>If you are going to restart the application, make you that you will restart also the web inspector browser since it will be disabled once you stop running the application.
+<br>
+<img alt="disabledDebugger" src="../assets/disabledDebugger.png" /></li>
+</ul>
+</li>
+</ol>
+<h2 id="how-to-copy-variables-in-breakpoints">How to copy variables in breakpoints</h2>
+<p>For example you are now observing the using the breakpoints and debugger and you wanted to have a copy of the variables being passed into each function, you can:</p>
+<ol>
+<li>Look for the variable that you want on the right side of the source panel. For example we have menuItem variable. (as long as the variable has been called already, then you can see it under the "local" section
+    <br>
+    <img alt="menuItem" src="../assets/menuItem.png" /></li>
+<li>Right click on the variable and select "store as global variable"
+    <br>
+    <img alt="globalVariable" src="../assets/globalVariable.png" /></li>
+<li>You will notice on the bottom part of the source panel, there is a console that shows some details about the variable and also a variable name (temp1) . Temp1 is the name of the temporary variable where the menuItem is being stored.
+    <br>
+    <img alt="console" src="../assets/console.png" /></li>
+<li>To copy this on your clipboard, type on the console "copy(temp1)"  and hit enter.
+    <br>
+    <img alt="copyTemp1" src="../assets/copyTemp1.png" /></li>
+<li>Even though it says undefined, the value is still save on your clipboard so make sure to paste it somewhere before you copy new values
+    <br>
+    <img alt="response" src="../assets/response.png" /></li>
+<li>You can store as many temp variable as you can, but make sure to change the variable name on the "copy" command. </li>
+<li>There are some variables that cant be properly copied like the example below since this one is a Class. So you need to dig into the class variable and look for the specific object that you want to observer within that.
+    <br>
+    <img alt="classTypeVariable" src="../assets/classTypeVariable.png" /></li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Installation"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../designImport/" class="btn btn-neutral float-right" title="Design Import">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../installation/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../designImport/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

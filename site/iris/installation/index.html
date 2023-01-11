@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><link rel="canonical" href="https://github.com/paguejoy/voltmx-design-import/iris/installation/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Installation - VoltMX Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Installation";
+        var mkdocs_page_input_path = "iris/installation.md";
+        var mkdocs_page_url = "/paguejoy/voltmx-design-import/iris/installation/";
+      </script>
+    
+    <script src="../../js/jquery-3.6.0.min.js" defer></script>
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+      <script>hljs.initHighlightingOnLoad();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> VoltMX Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Iris</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Installation</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#vpn">VPN</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#ssh-key">SSH KEY</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#external-dependencies">External Dependencies</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-directory">Project Directory</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../debugger/">Debugger</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../designImport/">Design Import</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Foundry</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Foundry/">Foundry</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../foundry/Keep/">KEEP</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">VoltMX Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" alt="Docs"></a> &raquo;</li>
+          <li>Iris &raquo;</li>
+      <li>Installation</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="installation">Installation</h1>
+<hr />
+<h2 id="vpn">VPN</h2>
+<ol>
+<li>Make sure you are connected to a VPN (GlobalProtect/SafeLinx) throughout the process.<ul>
+<li>if no VPN access yet, refer to this <a href="https://teams.microsoft.com/l/channel/19%3A644478a2890541ed800171a26671f201%40thread.tacv2/tab%3A%3A668f359a-8f50-408b-91a0-f9822d996c85?groupId=88fe1523-7bc2-4e36-8be6-f0ee46ad171c&amp;tenantId=189de737-c93a-4f5a-8b68-6f4ca9941912&amp;allowXTenantAccess=false"><strong>guideline</strong></a> to request for vpn access.</li>
+</ul>
+</li>
+</ol>
+<h2 id="ssh-key">SSH KEY</h2>
+<ol>
+<li>Setup github ssh-key<ul>
+<li>If no ssh key associated with your github account, refer to these links below:<ul>
+<li><a href="https://docs.github.com/en/authentication/connecting-to-github-with-ssh">Connecting to GitHub with SSH</a></li>
+<li><a href="https://www.youtube.com/watch?v=8X4u9sca3Io">Setting Up SSH Keys for GitHub</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="external-dependencies">External Dependencies</h2>
+<ol>
+<li>
+<p>Install <strong>Apache Ant</strong>
+<br>
+    <em>Note: (these are the dependencies needed based from kbuild/bootscripts/externaldependencies.json)</em></p>
+<p><strong>Refer to your machine OS below</strong></p>
+<ul>
+<li><strong>Mac</strong><ul>
+<li>Install Apache ant (make sure you have brew installed on your mac)
+    brew install ant
+<br></li>
+</ul>
+</li>
+<li><strong>Windows</strong><ul>
+<li><a href="https://ant.apache.org/manual/install.html#getBinary">Installing Apache Ant</a></li>
+<li><a href="https://www.youtube.com/watch?v=7z2yXY57jxY">How to install Apache Ant on Windows 10</a></li>
+<li><a href="https://ant.apache.org/bindownload.cgi">Binary Distributions</a>
+<br></li>
+</ul>
+</li>
+<li>How to check version in terminal? <ul>
+<li><strong>ant -version</strong>
+<br></li>
+</ul>
+</li>
+<li>If not working:<ul>
+<li>Go to your machine's <strong>Environment Variables</strong><ul>
+<li>Create a variable <strong>ANT_HOME</strong> and supply it with apache ant dependency's <u><em>file path</em></u> installed in your machine
+<br>
+(<strong>Ex:</strong> c:\users\username\programfiles\ant\bin)</li>
+</ul>
+</li>
+<li>In the System Variable<ul>
+<li>Add a new Path Variable, add the ant file path
+<br>
+(<strong>Ex:</strong> c:\users\username\programfiles\ant)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Install <strong>JAVA SDK 1.8</strong></p>
+<ul>
+<li>Click <u><a href="https://hclo365.sharepoint.com/:u:/r/sites/HCLLabs-ProjectJanus/Shared%20Documents/Migration%20Tooling/jdk-8-macosx-x64.dmg?csf=1&amp;web=1&amp;e=rSvNQN">Java SDK 1.8</a></u> link to download the installer (x64 installer)</li>
+<li><a href="https://www.youtube.com/watch?v=pxi3iIy4F5A">How to Install Java on Mac | Install Java JDK on macOS video tutorial</a></li>
+<li><a href="https://mkyong.com/java/how-to-set-java_home-environment-variable-on-mac-os-x/">How to Set $JAVA_HOME environment variable on macOS</a></li>
+<li><a href="https://www.youtube.com/watch?v=aOvdPI55y3o">How to Install Java JDK on Windows 10 || JDK 1.8 (2020) video tutorial</a></li>
+<li><a href="https://www.oracle.com/java/technologies/downloads/#java8-windows">Java Downloads</a>(x64 installer)</li>
+<li><a href="https://mkyong.com/java/how-to-set-java_home-on-windows-10/">How to set JAVA_HOME on Windows 10?</a></li>
+</ul>
+</li>
+<li>
+<p>Install <strong>Nodejs 15.4</strong></p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=SwUKKCS3r3c">How to install Nodejs on Mac [Any version &amp; Easy method] | 2022 video tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=IZfAZ7R0FQg">How to Update Node.js and NPM in the Terminal on Mac OS video tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=4Wq53LL4alQ">How to Install Node js 16.15.1 on Windows 10 | Latest Node js Installation on Windows 10 video tutorial</a></li>
+<li><a href="https://nodejs.org/download/release/v15.4.0/">Nodejs Downloads</a></li>
+</ul>
+</li>
+</ol>
+<h2 id="project-directory">Project Directory</h2>
+<ol>
+<li>Create a directory/folder (suggested name: Iris)
+    <br>
+    (Suggestion: Create this directory under same level of desktop, documentsm downloads, etc. <br> Ex: <strong>Macintosh &gt; Users &gt; userprofile</strong>)</li>
+<li>
+<p>Inside the newly created project directory, clone via ssh the <strong>konywebstudio</strong> and <strong>hikes</strong> repos. <u>See links below:</u></p>
+<ul>
+<li>
+<p><u><a href="https://github01.hclpnp.com/phoenix-core/konywebstudio">Konywebstudio</a></u>
+<br>
+Note: our team branch is <strong>go-migration</strong>
+<br>
+<code>Git
+    git clone git@github01.hclpnp.com:phoenix-core/konywebstudio.git
+    git fetch origin go-migration
+    git checkout go-migration</code></p>
+</li>
+<li>
+<p><u><a href="https://github01.hclpnp.com/phoenix-core/hikes">Hikes</a></u>
+<br>
+<code>git clone git@github01.hclpnp.com:phoenix-core/hikes.git</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Add a <mark><strong>.npmrc</strong></mark> file inside the root directory of <strong>konywebstudio</strong>.
+    <br>
+    Inside this file, copy and paste the code below:</p>
+<p><code>registry=https://nexus.fnxlabs.com/repository/npm-all/
+@phoenix:registry=https://nexus.fnxlabs.com/repository/phoenix/</code></p>
+<p><img alt="npmrc" src="../assets/npmrc.png" /></p>
+</li>
+<li>
+<p>Create a folder named <strong>build</strong> inside <strong>konywebstudio</strong>'s root folder/directory
+    <br>
+    (Note: build folder will be just an empty folder.)</p>
+</li>
+<li>
+<p>In the terminal, cd to konywebstudio. Run the following command (according to machine OS).</p>
+<ul>
+<li>
+<p>Mac
+    <br></p>
+<ul>
+<li>Building the installer (if build failed, run the command again.)
+<br>
+<strong>ant -f macbuild.xml</strong></li>
+</ul>
+<p><img alt="npmrc" src="../assets/macbuild.png" /></p>
+<ul>
+<li>After successful build, run this command to test if it is working.
+<br>
+<strong>./run_mach.hs</strong>
+<br>
+<img alt="npmrc" src="../assets/run_mac.png" /></li>
+</ul>
+</li>
+<li>
+<p>Windows</p>
+<ol>
+<li>Install Node Package Manager
+<br>
+<code>npm install</code>
+<br>
+<br></li>
+<li>
+<p>run this command to test if it is working.
+<br>
+<code>.\run_win.bat</code>
+<img alt="npmrc" src="../assets/run_win.png" /></p>
+</li>
+<li>
+<p>Iris app will automatically opens up. Sample image below.
+<img alt="npmrc" src="../assets/iris.png" /></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h1 id="additional-troubleshooting-steps">Additional Troubleshooting Steps</h1>
+<hr />
+<ol>
+<li>
+<p>Install <strong>python</strong>
+<br>
+    <a href="https://www.youtube.com/watch?v=AwIXfaGEN4c">How to install Python 3.10.4 on Windows 10</a>
+<br></p>
+</li>
+<li>
+<p>Run this command.
+<br>
+(Make sure you are connected to Global Protect VPN and not Safelinx)</p>
+<ul>
+<li>if error appeared (example: VS/gype) on npm install, run on <u>CMD Admin</u>
+<br>
+<br>
+<code>npm install --g --production windows-build-tools</code>  <br />
+<img alt="npmrc" src="../assets/error.png" /></li>
+</ul>
+</li>
+<li>
+<p>If successful, the end result should atleast look like this:
+    <img alt="npmrc" src="../assets/global.png" /></p>
+</li>
+</ol>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../debugger/" class="btn btn-neutral float-right" title="Debugger">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../debugger/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme_extra.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+    <script defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>
