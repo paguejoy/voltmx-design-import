@@ -14,4 +14,4 @@ theme:
     name: readthedocs
     highlightjs: true
     sticky_navigation: true
-    logo: ./logo.png
+    logo: logo.png
