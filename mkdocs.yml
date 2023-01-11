@@ -10,4 +10,8 @@ nav:
         - Foundry: 'foundry/Foundry.md'
         - KEEP: 'foundry/Keep.md'
         
-theme: readthedocs
+theme: 
+    name: readthedocs
+    highlightjs: true
+    sticky_navigation: true
+    logo: ./logo.png
