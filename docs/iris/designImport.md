@@ -1,6 +1,6 @@
 # Design Import
 ____________________
-#### How to connect Iris to Foundry server:
+## How to connect Iris to Foundry server:
 
 1. Go to the menu bar, go to Volt MX Iris > Preferences:
     - Mac
